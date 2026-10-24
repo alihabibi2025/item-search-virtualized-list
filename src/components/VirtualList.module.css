@@ -1,0 +1,27 @@
+.scroller {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* Scrolling only moves composited layers; nothing outside needs re-layout. */
+  contain: strict;
+  will-change: scroll-position;
+}
+
+.scroller:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.spacer {
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  contain: layout paint;
+}
